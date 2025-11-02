@@ -21,4 +21,4 @@ import { config, configValidationSchema } from './config/constants'
     }),
   ],
 })
-export class GlobalModule {}
+export class CoreModule {}

@@ -2,8 +2,8 @@ import { HttpStatus, Injectable } from '@nestjs/common'
 import { SignInReqDto } from './dto/req/sign-in.dto'
 import { JwtService } from '@nestjs/jwt'
 import { JwtPayload } from './types/jwt-payload.interface'
-import { BusinessException } from 'src/common/exceptions/business.exception'
-import { comparePassword } from 'src/common/utils/encrypter'
+import { BusinessException } from 'src/shared/exceptions/business.exception'
+import { comparePassword } from 'src/shared/utils/encrypter'
 import { UsersService } from '../users/users.service'
 
 @Injectable()

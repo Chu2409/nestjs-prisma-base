@@ -3,8 +3,8 @@ import { AuthGuard } from '@nestjs/passport'
 import { Reflector } from '@nestjs/core'
 import { IS_PUBLIC_KEY } from '../decorators/public-route.decorator'
 import { Observable } from 'rxjs'
-import { BusinessException } from 'src/common/exceptions/business.exception'
-import { UserPersonResDto } from 'src/core/users/dto/res/user.dto'
+import { BusinessException } from 'src/shared/exceptions/business.exception'
+import { UserPersonResDto } from 'src/modules/users/dto/res/user.dto'
 
 @Injectable()
 export class JwtAuthGuard extends AuthGuard('jwt') {

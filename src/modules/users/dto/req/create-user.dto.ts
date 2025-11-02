@@ -6,7 +6,7 @@ import {
   IsString,
   ValidateNested,
 } from 'class-validator'
-import { CreatePersonReqDto } from 'src/core/people/dto/req/create-person.dto'
+import { CreatePersonReqDto } from 'src/modules/people/dto/req/create-person.dto'
 import { Type } from 'class-transformer'
 import { ApiProperty } from '@nestjs/swagger'
 import { USER_TYPE } from '../../types/user-type.enum'

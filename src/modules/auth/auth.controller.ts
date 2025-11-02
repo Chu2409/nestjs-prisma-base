@@ -9,7 +9,7 @@ import {
 import { AuthService } from './auth.service'
 import { SignInReqDto } from './dto/req/sign-in.dto'
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger'
-import { ApiStandardResponse } from 'src/common/decorators/api-standard-response.decorator'
+import { ApiStandardResponse } from 'src/shared/decorators/api-standard-response.decorator'
 import { SignInResDto } from './dto/res/sign-in-res.dto'
 import { Auth } from './decorators/auth.decorator'
 import { USER_TYPE } from '../users/types/user-type.enum'

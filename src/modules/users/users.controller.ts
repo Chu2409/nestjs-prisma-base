@@ -12,13 +12,13 @@ import {
 import { UsersService } from './users.service'
 import { CreateUserReqDto } from './dto/req/create-user.dto'
 import { UpdateUserReqDto } from './dto/req/update-user.dto'
-import { BaseParamsReqDto } from 'src/common/dtos/req/base-params.dto'
+import { BaseParamsReqDto } from 'src/shared/dtos/req/base-params.dto'
 import { ApiTags, ApiOperation } from '@nestjs/swagger'
 import { ChangeUserStatusDto } from './dto/req/change-user-status.dto'
 import {
   ApiPaginatedResponse,
   ApiStandardResponse,
-} from 'src/common/decorators/api-standard-response.decorator'
+} from 'src/shared/decorators/api-standard-response.decorator'
 import { UserPersonResDto } from './dto/res/user.dto'
 
 @ApiTags('Users')

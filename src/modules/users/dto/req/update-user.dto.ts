@@ -11,7 +11,7 @@ import {
 } from 'class-validator'
 import { USER_TYPE } from '../../types/user-type.enum'
 import { USER_STATUS } from '../../types/user-status.enum'
-import { UpdatePersonReqDto } from 'src/core/people/dto/req/update-person.dto'
+import { UpdatePersonReqDto } from 'src/modules/people/dto/req/update-person.dto'
 
 export class UpdateUserReqDto extends PartialType(
   OmitType(CreateUserReqDto, ['person']),

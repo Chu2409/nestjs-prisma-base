@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common'
-import { DBService } from 'src/global/database/database.service'
+import { DBService } from 'src/core/database/database.service'
 import { UserFiltersReqDto } from './dto/req/user-filters.dto'
 import { UserPersonResDto } from './dto/res/user.dto'
 import { CreateUserReqDto } from './dto/req/create-user.dto'

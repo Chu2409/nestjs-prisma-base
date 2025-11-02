@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger'
 import { USER_TYPE } from '../../types/user-type.enum'
 import { USER_STATUS } from '../../types/user-status.enum'
-import { PersonResDto } from 'src/core/people/dto/res/person.dto'
+import { PersonResDto } from 'src/modules/people/dto/res/person.dto'
 
 export class BaseUserResDto {
   @ApiProperty({
