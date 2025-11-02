@@ -1,4 +1,4 @@
-import type { UserStatus } from '@prisma/client'
+import { UserStatus } from '@prisma/client'
 
 export const USER_STATUS = {
   ACTIVE: 'ACTIVE',

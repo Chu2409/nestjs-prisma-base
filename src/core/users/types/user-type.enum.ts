@@ -1,4 +1,4 @@
-import type { UserType } from '@prisma/client'
+import { UserType } from '@prisma/client'
 
 export const USER_TYPE = {
   ADMINISTRATOR: 'ADMINISTRATOR',

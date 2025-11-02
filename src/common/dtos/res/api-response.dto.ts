@@ -78,3 +78,19 @@ export class ApiPaginatedRes<T> {
   })
   pages: number
 }
+
+export class ApiCustomRes<T> {
+  @ApiProperty({
+    description: 'Data returned from the API',
+    type: Object,
+    nullable: true,
+  })
+  data: T
+
+  @ApiProperty({
+    description: 'Custom message returned from the API',
+    type: ApiMessage,
+    nullable: true,
+  })
+  customMessage?: ApiMessage
+}

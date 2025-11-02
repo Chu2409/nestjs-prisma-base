@@ -1,6 +1,6 @@
 import { HttpStatus, Injectable, NotFoundException } from '@nestjs/common'
 import { UpdateUserReqDto } from './dto/req/update-user.dto'
-import { DisplayableException } from 'src/common/exceptions/displayable.exception'
+import { BusinessException } from 'src/common/exceptions/business.exception'
 import { hashPassword } from 'src/common/utils/encrypter'
 import { CreateUserReqDto } from './dto/req/create-user.dto'
 import { UserFiltersReqDto } from './dto/req/user-filters.dto'
@@ -113,17 +113,17 @@ export class UsersService {
 
     if (existingUser) {
       if (existingUser.username === username) {
-        throw new DisplayableException(
+        throw new BusinessException(
           'El nombre de usuario ya está en uso',
           HttpStatus.CONFLICT,
         )
       } else if (existingUser.person?.email === email) {
-        throw new DisplayableException(
+        throw new BusinessException(
           'El correo electrónico ya está en uso',
           HttpStatus.CONFLICT,
         )
       } else if (existingUser.person?.dni === dni) {
-        throw new DisplayableException(
+        throw new BusinessException(
           'El DNI ya está en uso',
           HttpStatus.CONFLICT,
         )

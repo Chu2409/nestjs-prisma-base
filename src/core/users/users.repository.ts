@@ -1,15 +1,15 @@
 import { Injectable } from '@nestjs/common'
-import { DatabaseService } from 'src/global/database/database.service'
+import { DBService } from 'src/global/database/database.service'
 import { UserFiltersReqDto } from './dto/req/user-filters.dto'
-import { Prisma } from '@prisma/client'
 import { UserPersonResDto } from './dto/res/user.dto'
 import { CreateUserReqDto } from './dto/req/create-user.dto'
 import { UpdateUserReqDto } from './dto/req/update-user.dto'
 import { USER_STATUS } from './types/user-status.enum'
+import { Prisma } from '@prisma/client'
 
 @Injectable()
 export class UsersRepository {
-  constructor(private readonly dbService: DatabaseService) {}
+  constructor(private readonly dbService: DBService) {}
 
   async findMany(
     filters: UserFiltersReqDto,

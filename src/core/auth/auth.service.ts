@@ -2,7 +2,7 @@ import { HttpStatus, Injectable } from '@nestjs/common'
 import { SignInReqDto } from './dto/req/sign-in.dto'
 import { JwtService } from '@nestjs/jwt'
 import { JwtPayload } from './types/jwt-payload.interface'
-import { DisplayableException } from 'src/common/exceptions/displayable.exception'
+import { BusinessException } from 'src/common/exceptions/business.exception'
 import { comparePassword } from 'src/common/utils/encrypter'
 import { UsersService } from '../users/users.service'
 
@@ -18,7 +18,7 @@ export class AuthService {
       await this.usersService.findOneWithPasswordByUsername(username)
 
     if (!userFound)
-      throw new DisplayableException(
+      throw new BusinessException(
         'Credenciales incorrectas',
         HttpStatus.NOT_FOUND,
       )
@@ -41,7 +41,7 @@ export class AuthService {
     const isPasswordValid = comparePassword(password, userPassword)
 
     if (!isPasswordValid)
-      throw new DisplayableException(
+      throw new BusinessException(
         'Creedenciales incorrectas',
         HttpStatus.BAD_REQUEST,
       )
@@ -58,7 +58,7 @@ export class AuthService {
       return this.jwtService.verify(token)
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      throw new DisplayableException('Token inválido', HttpStatus.UNAUTHORIZED)
+      throw new BusinessException('Token inválido', HttpStatus.UNAUTHORIZED)
     }
   }
 }

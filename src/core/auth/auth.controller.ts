@@ -14,7 +14,7 @@ import { SignInResDto } from './dto/res/sign-in-res.dto'
 import { Auth } from './decorators/auth.decorator'
 import { USER_TYPE } from '../users/types/user-type.enum'
 import { GetUser } from './decorators/get-user.decorator'
-import { User } from '@prisma/client'
+import type { User } from '@prisma/client'
 
 @ApiTags('Auth')
 @Controller('auth')

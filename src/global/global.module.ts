@@ -1,12 +1,13 @@
 import { Global, Module } from '@nestjs/common'
+import { DBService } from './database/database.service'
+import { CustomConfigService } from './config/config.service'
 import { ConfigModule } from '@nestjs/config'
-import { CustomConfigService } from './config.service'
-import { config, configValidationSchema } from './constants'
+import { config, configValidationSchema } from './config/constants'
 
 @Global()
 @Module({
-  providers: [CustomConfigService],
-  exports: [CustomConfigService],
+  providers: [DBService, CustomConfigService],
+  exports: [DBService, CustomConfigService],
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
@@ -20,4 +21,4 @@ import { config, configValidationSchema } from './constants'
     }),
   ],
 })
-export class CustomConfigModule {}
+export class GlobalModule {}

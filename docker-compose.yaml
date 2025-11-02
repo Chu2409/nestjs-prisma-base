@@ -1,6 +1,6 @@
 services:
   db:
-    container_name: nestjs-prisma-base-db
+    container_name: edu-assistant-db
     image: postgres:17-alpine
     restart: always
     ports:

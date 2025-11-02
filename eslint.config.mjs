@@ -17,9 +17,8 @@ export default tseslint.config(
         ...globals.node,
         ...globals.jest,
       },
-      sourceType: 'module',
+      sourceType: 'commonjs',
       parserOptions: {
-        project: 'tsconfig.json',
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
       },
@@ -29,9 +28,9 @@ export default tseslint.config(
     rules: {
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-floating-promises': 'warn',
-      '@typescript-eslint/no-unsafe-argument': 'warn',
+      '@typescript-eslint/no-unsafe-argument': 'off',
+      "prettier/prettier": ["error", { endOfLine: "auto" }],
       '@typescript-eslint/no-unused-vars': 'warn',
-      'no-console': 'warn',
       '@typescript-eslint/no-unsafe-assignment': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'off',
       '@typescript-eslint/no-unsafe-call': 'off',
@@ -39,6 +38,7 @@ export default tseslint.config(
       'object-shorthand': ['error', 'always'],
       'quotes': ['error', 'single'],
       "@typescript-eslint/await-thenable": "error",
+      "@typescript-eslint/no-unnecessary-condition": "error",
     },
   },
 );
